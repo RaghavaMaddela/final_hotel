@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Dining Reservation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <header>
+        <h1 class="heading">Hotel Dining Reservation</h1>
+        <p class="title">Select a table and book your reservation</p>
+    </header>
+    
+    <div class="container">
+        <div class="form-section">
+            <div class="login-box">
+                <form id="reservationForm">
+                    <h2>Available Tables</h2>
+                    <table id="reservationTable">
+                        <thead>
+                            <tr>
+                                <th>Table Number</th>
+                                <th>Seats</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-table-id="1">
+                                <td>1</td>
+                                <td>4</td>
+                                <td class="status available">Available</td>
+                                <td><button type="button" class="reserveBtn">Select</button></td>
+                            </tr>
+                            <tr data-table-id="2">
+                                <td>2</td>
+                                <td>2</td>
+                                <td class="status available">Available</td>
+                                <td><button type="button" class="reserveBtn">Select</button></td>
+                            </tr>
+                            <tr data-table-id="3">
+                                <td>3</td>
+                                <td>6</td>
+                                <td class="status available">Available</td>
+                                <td><button type="button" class="reserveBtn">Select</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+
+            <div class="signup-box">
+                <h2>Reservation Details</h2>
+                <form id="detailsForm">
+                    <input type="text" id="name" class="ele" placeholder="Your Name" required>
+                    <input type="date" id="date" class="ele" required>
+                    <input type="time" id="time" class="ele" required>
+                    <input type="number" id="people" class="ele" placeholder="Number of People" min="1" required>
+                    <button type="submit" class="clkbtn">Confirm Reservation</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="confirmationMessage" style="display: none;">
+            <h2>Reservation Confirmed</h2>
+            <p id="confirmationDetails"></p>
+        </div>
+    </div>
+
+    <script src="table.js"></script>
+</body>
+</html>
